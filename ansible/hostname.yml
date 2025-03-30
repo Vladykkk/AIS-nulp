@@ -1,0 +1,13 @@
+---
+- name: Update hostname
+  hosts: target
+  become: yes
+  tasks:
+    - name: Set hostname
+      hostname:
+        name: name-surename-lab2
+    
+    - name: Update /etc/hostname file
+      copy:
+        content: "name-surename-lab2\n"
+        dest: /etc/hostname
