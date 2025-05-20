@@ -1,0 +1,8 @@
+---
+- name: Change hostname on remote system
+  hosts: target
+  become: true
+  tasks:
+    - name: Set hostname
+      ansible.builtin.hostname:
+        name: vladyslav-rybak-lab2

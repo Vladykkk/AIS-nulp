@@ -1,0 +1,3 @@
+# ansible/roles/update_hostname/defaults/main.yml
+---
+hostname: name-surename-lab2

@@ -1,0 +1,10 @@
+# ansible/roles/update_hostname/tasks/main.yml
+---
+- name: Set hostname
+  hostname:
+    name: "{{ hostname }}"
+
+- name: Update /etc/hostname file
+  copy:
+    content: "{{ hostname }}\n"
+    dest: /etc/hostname
